@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="newTask" placeholder="Нове завдання" />
+    <button onclick="addTask()">Додати</button>
+
+    <ul id="taskList"></ul>
+
+    <form onsubmit="return saveUserData()">
+      <label for="username">Логін:</label>
+      <input type="text" id="username" required /><br /><br />
+
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" required /><br /><br />
+
+      <button type="submit">Зберегти</button>
+    </form>
+
+    <input style="margin-top: 10px;" type="text" id="bookmark" placeholder="Введіть URL" />
+    <button onclick="addBookmark()">Додати закладку</button>
+
+    <ul id="bookmarkList"></ul>
+
+    <form onsubmit="return addContact()">
+      <input type="text" id="firstName" placeholder="Ім'я" required />
+      <input type="text" id="lastName" placeholder="Прізвище" required />
+      <input type="text" id="phone" placeholder="Телефон" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <button type="submit">Додати контакт</button>
+    </form>
+
+    <ul id="contactList"></ul>
+    <script src="./index.js"></script>
+  </body>
+</html>
